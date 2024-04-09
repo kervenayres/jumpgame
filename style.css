@@ -1,0 +1,106 @@
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 380px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    text-transform: lowercase;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #cceeff;
+    font-family: Arial, sans-serif;
+}
+
+#game {
+    width: 500px;
+    height: 240px;
+    border: 1px solid black;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-image: linear-gradient(#86baf7, #99e6ff);
+    animation: backgroundScroll 10s linear infinite;
+}
+
+@keyframes backgroundScroll {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+}
+
+#character {
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    width: 10%;
+    height: auto;
+}
+
+.animate {
+    bottom: 50px;
+}
+
+.animate {
+    animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+
+    30% {
+        top: 100px;
+    }
+
+    70% {
+        top: 100px;
+    }
+
+    100% {
+        top: 150px;
+    }
+}
+
+#block {
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+    width: 6%;
+    height: auto;
+    animation: block 1s infinite linear;
+}
+
+@keyframes block {
+    0% {
+        left: 500px
+    }
+
+    100% {
+        left: -20px
+    }
+}
+
+p {
+    text-align: center;
+    margin-top: 350px;
+    font-size: 20px;
+    color: #333;
+}
